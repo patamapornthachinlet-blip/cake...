@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ขั้นตอนการสั่งเค้ก | BAKE BOLD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Kanit:wght@700&family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .process-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .step-card {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      background: var(--white);
+      border: var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: var(--shadow-lg);
+    }
+    .step-number {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      background: var(--pastel-yellow);
+      color: var(--black);
+      border: var(--border);
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 3px 3px 0px var(--black);
+    }
+    @media (max-width: 600px) {
+      .step-card { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">BAKE BOLD 🍰</a>
+      <div class="menu-toggle" id="mobile-menu">☰</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="services.html">บริการของเรา</a></li>
+        <li><a href="work.html">ผลงานเค้ก</a></li>
+        <li><a href="process.html" class="active">ขั้นตอนการสั่ง</a></li>
+        <li><a href="contact.html">ติดต่อเรา</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>HOW TO ORDER</h1>
+    </div>
+
+    <div class="process-steps">
+      <div class="step-card" style="background: var(--peach);">
+        <div class="step-number">01</div>
+        <div>
+          <h3>เลือกแบบและรสชาติ</h3>
+          <p>เลือกแบบเค้กจากหน้า Gallery หรือนำแบบที่คุณต้องการมาคุยกับเรา พร้อมเลือกรสชาติเนื้อเค้กและฟิลลิ่งที่ชอบ</p>
+        </div>
+      </div>
+
+      <div class="step-card" style="background: var(--pastel-yellow);">
+        <div class="step-number">02</div>
+        <div>
+          <h3>คอนเฟิร์มวันที่ & ชำระเงิน</h3>
+          <p>ระบุวันที่และเวลาที่ต้องการรับเค้ก (แนะนำสั่งล่วงหน้า 3-5 วัน) จากนั้นทำการมัดจำเพื่อล็อคคิวอบเค้ก</p>
+        </div>
+      </div>
+
+      <div class="step-card" style="background: var(--pastel-orange); color: white;">
+        <div class="step-number" style="background: white;">03</div>
+        <div>
+          <h3>จัดส่ง / มารับเค้ก</h3>
+          <p>รับเค้กที่หน้าร้าน หรือให้เราจัดส่งผ่าน Rider รถยนต์ควบคุมอุณหภูมิ ส่งตรงถึงหน้าบ้านอย่างปลอดภัย!</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">BAKE BOLD</div>
+      <p>© 2026 BAKE BOLD Studio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('mobile-menu').addEventListener('click', () => {
+      document.getElementById('nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>บริการของเรา | BAKE BOLD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Kanit:wght@700&family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+    .service-card {
+      background: var(--peach);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card:nth-child(2) { background: var(--pastel-yellow); }
+    .service-card:nth-child(3) { background: var(--pastel-orange); color: var(--white); }
+    .service-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border: var(--border);
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    .price-tag {
+      display: inline-block;
+      background: var(--black);
+      color: var(--white);
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-family: var(--font-heading);
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">BAKE BOLD 🍰</a>
+      <div class="menu-toggle" id="mobile-menu">☰</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="services.html" class="active">บริการของเรา</a></li>
+        <li><a href="work.html">ผลงานเค้ก</a></li>
+        <li><a href="process.html">ขั้นตอนการสั่ง</a></li>
+        <li><a href="contact.html">ติดต่อเรา</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>OUR SERVICES</h1>
+    </div>
+
+    <div class="services-grid">
+      <div class="neo-card service-card">
+        <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&w=600&q=80" alt="Custom Birthday Cake">
+        <h3>1. Custom Birthday Cake</h3>
+        <p>เค้กวันเกิดออกแบบเฉพาะบุคคล คุณสามารถส่ง Reference หรือไอเดียที่ต้องการ ให้เราปั้นเป็นเค้กสุดป๊อปที่ไม่ซ้ำใคร</p>
+        <span class="price-tag">เริ่มต้น ฿1,200</span>
+      </div>
+
+      <div class="neo-card service-card">
+        <img src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&w=600&q=80" alt="Wedding & Event Cake">
+        <h3>2. Wedding & Large Event</h3>
+        <p>เค้กแต่งงานและงานอีเวนต์ขนาดใหญ่ 2-5 ชั้น ออกแบบให้โดดเด่นเข้ากับธีมงาน เสริมความหรูหราแบบมีสไตล์</p>
+        <span class="price-tag">เริ่มต้น ฿4,500</span>
+      </div>
+
+      <div class="neo-card service-card">
+        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80" alt="Cupcake Set">
+        <h3>3. Party Cupcake Set</h3>
+        <p>คัพเค้กจัดเซ็ตสำหรับงานปาร์ตี้หรือของขวัญองค์กร เลือกรสชาติและตกแต่งหน้าตาได้ตามธีม แจกจ่ายง่าย อร่อยเต็มคำ</p>
+        <span class="price-tag">เริ่มต้น ฿890 / Set</span>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">BAKE BOLD</div>
+      <p>© 2026 BAKE BOLD Studio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('mobile-menu').addEventListener('click', () => {
+      document.getElementById('nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

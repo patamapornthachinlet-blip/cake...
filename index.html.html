@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BAKE BOLD | ร้านเค้กคราฟต์สุดป๊อป</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Kanit:wght@700&family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Hero Layout (Asymmetric Collage) */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+      min-height: 80vh;
+      position: relative;
+    }
+    .hero-text { position: relative; z-index: 2; }
+    .hero-title {
+      font-size: clamp(3rem, 7vw, 5rem);
+      margin: 15px 0;
+      text-shadow: 3px 3px 0px var(--peach);
+    }
+    .hero-collage {
+      position: relative;
+      height: 450px;
+    }
+    .collage-img {
+      position: absolute;
+      border: var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      object-fit: cover;
+    }
+    .img-1 { width: 80%; height: 320px; top: 0; left: 0; transform: rotate(-3deg); }
+    .img-2 { width: 60%; height: 220px; bottom: 0; right: 0; transform: rotate(4deg); background: var(--pastel-yellow); }
+    .hero-badge-floating {
+      position: absolute;
+      top: 20px; right: -10px;
+      background: var(--pastel-orange);
+      color: white;
+      padding: 15px;
+      border: var(--border);
+      border-radius: 50%;
+      width: 100px; height: 100px;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      font-weight: bold;
+      transform: rotate(12deg);
+      box-shadow: var(--shadow);
+      z-index: 3;
+    }
+
+    /* Highlight Banner Block (หลีกเลี่ยงพืนขาว) */
+    .highlight-strip {
+      background: var(--pastel-orange);
+      border-top: var(--border);
+      border-bottom: var(--border);
+      padding: 40px 0;
+      color: var(--white);
+      transform: rotate(-1deg);
+      margin: 60px 0;
+    }
+    .strip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .strip-item {
+      background: var(--black);
+      color: var(--white);
+      padding: 25px;
+      border-radius: var(--radius);
+      border: 2px solid var(--pastel-yellow);
+    }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-collage { height: 350px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">BAKE BOLD 🍰</a>
+      <div class="menu-toggle" id="mobile-menu">☰</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active">หน้าแรก</a></li>
+        <li><a href="services.html">บริการของเรา</a></li>
+        <li><a href="work.html">ผลงานเค้ก</a></li>
+        <li><a href="process.html">ขั้นตอนการสั่ง</a></li>
+        <li><a href="contact.html">ติดต่อเรา</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="shape-blob-1" style="top: 10%; left: -50px;"></div>
+    
+    <section class="hero">
+      <div class="hero-text">
+        <span class="badge">✨ Vibrant & Unique Cake Design</span>
+        <h1 class="hero-title">NOT YOUR ORDINARY CAKE.</h1>
+        <p>เปลี่ยนทุกเทศกาลให้มีชีวิตชีวาด้วยเค้กดีไซน์ป๊อป มินิมอลแต่จัดจ้าน รสชาติอร่อยพรีเมียม ถ่ายรูปมุมไหนก็ปัง!</p>
+        <div style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap;">
+          <a href="work.html" class="btn">ชมแบบเค้กทั้งหมด</a>
+          <a href="contact.html" class="btn btn-yellow">สั่งเค้กด่วน ➔</a>
+        </div>
+      </div>
+      
+      <div class="hero-collage">
+        <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=800&q=80" alt="Bold Birthday Cake" class="collage-img img-1">
+        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=600&q=80" alt="Delicious Cake Piece" class="collage-img img-2">
+        <div class="hero-badge-floating">100%<br>HAND MADE</div>
+      </div>
+    </section>
+  </main>
+
+  <section class="highlight-strip">
+    <div class="container" style="padding: 0 20px;">
+      <div class="strip-grid">
+        <div class="strip-item">
+          <h3>🎨 Custom Design</h3>
+          <p>เลือกดีไซน์และโทนสีได้เองตามใจชอบ ไร้ขีดจำกัด</p>
+        </div>
+        <div class="strip-item">
+          <h3>🍓 Premium Ingredients</h3>
+          <p>เนยแท้จากฝรั่งเศส และวัตถุดิบนำเข้าคุณภาพสูง</p>
+        </div>
+        <div class="strip-item">
+          <h3>⚡ Express Delivery</h3>
+          <p>ส่งด่วนด้วยรถควบคุมอุณหภูมิ เค้กถึงมือสวยเป๊ะ</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">BAKE BOLD</div>
+      <p>© 2026 BAKE BOLD Studio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('mobile-menu').addEventListener('click', () => {
+      document.getElementById('nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

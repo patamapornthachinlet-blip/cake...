@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ติดต่อเรา | BAKE BOLD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Kanit:wght@700&family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    .contact-form {
+      background: var(--pastel-yellow);
+      padding: 30px;
+      border: var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: var(--border);
+      border-radius: 10px;
+      font-family: var(--font-body);
+      font-size: 1rem;
+    }
+    .info-box {
+      background: var(--peach);
+      padding: 30px;
+      border: var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    @media (max-width: 768px) {
+      .contact-container { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">BAKE BOLD 🍰</a>
+      <div class="menu-toggle" id="mobile-menu">☰</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="services.html">บริการของเรา</a></li>
+        <li><a href="work.html">ผลงานเค้ก</a></li>
+        <li><a href="process.html">ขั้นตอนการสั่ง</a></li>
+        <li><a href="contact.html" class="active">ติดต่อเรา</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>SAY HELLO!</h1>
+    </div>
+
+    <div class="contact-container">
+      <form class="contact-form" action="#" method="post" onsubmit="event.preventDefault(); alert('ขอบคุณสำหรับการติดต่อ! เราจะตอบกลับโดยเร็วที่สุด');">
+        <div class="form-group">
+          <label>ชื่อของคุณ</label>
+          <input type="text" placeholder="คุณสมชาย" required>
+        </div>
+        <div class="form-group">
+          <label>เบอร์โทรศัพท์ / LINE ID</label>
+          <input type="text" placeholder="081-234-5678" required>
+        </div>
+        <div class="form-group">
+          <label>รายละเอียดเค้กที่ต้องการสั่ง</label>
+          <textarea rows="4" placeholder="บอกรายละเอียด เช่น วันที่ใช้งาน, จำนวนก้อน, หรือไอเดีย..." required></textarea>
+        </div>
+        <button type="submit" class="btn" style="width: 100%;">ส่งข้อความสั่งซื้อ</button>
+      </form>
+
+      <div class="info-box">
+        <h2>CONTACT INFO</h2>
+        <p><strong>📍 Studio Address:</strong><br>123/45 ถนนสุขุมวิท กรุงเทพมหานคร</p>
+        <p><strong>⏰ Opening Hours:</strong><br>เปิดทุกวัน 09:00 - 18:00 น.</p>
+        <p><strong>📱 LINE Official:</strong> @bakebold</p>
+        <p><strong>📸 Instagram:</strong> @bakebold.cake</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">BAKE BOLD</div>
+      <p>© 2026 BAKE BOLD Studio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('mobile-menu').addEventListener('click', () => {
+      document.getElementById('nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
